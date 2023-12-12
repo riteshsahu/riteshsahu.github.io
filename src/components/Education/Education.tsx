@@ -13,7 +13,7 @@ export default function Education(props: IEducationProps) {
             <h3 className="heading-3">Bachelor of Computer Applications</h3>
           </div>
           <div className="pl-8">
-            <span className="text-sm">2015 - 2018</span>
+            <span className="text-sm">Indira Gandhi National Open University</span>
           </div>
         </li>
       </ul>

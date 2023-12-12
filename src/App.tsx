@@ -24,7 +24,7 @@ function App() {
           </div>
 
           <div className="w-full lg:w-1/3 sm:px-4 mt-8">
-            <Info />
+            {/* <Info /> */}
             <Education />
             <Languages />
           </div>

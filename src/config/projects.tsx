@@ -1,36 +1,14 @@
 export const projects = [
   {
-    name: "Tiluf",
-    desc: "Designed the website of Tiluf. Tiluf is the first decentralized mixed reality. It is a platform based on blockchain, which allows users to create their own customised mixed reality social experiences [yes, a metaverse!], and create a decentralzied economy around it!",
-    link: "https://tiluf.com/",
-    techStack: "React, TailwindCSS, SASS",
-    fullTechStack:
-      "React, TailwindCSS, SASS, Formik, Google Analytics, React Spring.",
-    images: [],
-  },
-  {
     name: "MasterBrews",
-    desc: "Designed the website of MasterBrews. MasterBrews is a Platform bringing the power of Smart Contracts, NFT and Blockchain technology.",
+    desc: "A platform bringing the power of Smart Contracts, NFT and Blockchain technology.",
     link: "https://masterbrews.cards/",
     techStack: "Gatsby, React, TailwindCSS, SASS",
     images: [],
   },
   {
     name: "Upvote",
-    desc: (
-      <span>
-        An open source question and answer website like&nbsp;
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://stackoverflow.com/"
-          className="link"
-        >
-          stackoverflow
-        </a>
-        .
-      </span>
-    ),
+    desc: "A platform for people to pogrammers and developers to ask and answer questions related to programming and software developement.",
     link: "https://git-upvote.herokuapp.com/",
     techStack: "PHP, Laravel, Vue, HTML, CSS, JavaScript, Linux.",
     fullTechStack:
