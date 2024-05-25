@@ -7,6 +7,9 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import AnimationProvider from "@/components/AnimationProvider";
 import "@/styles/main.scss";
+import "@fontsource/lato";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/700.css";
 ---
 
 <html lang="en">
@@ -15,10 +18,13 @@ import "@/styles/main.scss";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <meta name="author" content="Ritesh Sahu" />
+    <meta name="designer" content="Ritesh Sahu" />
+    <meta name="description" content="Webpage for Ritesh Sahu Portfolio" />
+    <title>Ritesh Sahu | Developer</title>
   </head>
   <body>
-    <AnimationProvider client:only="react">
+    <AnimationProvider>
       <div class="bg-gray-300 overflow-x-hidden">
         <Header />
         <main class="my-10 sm:mx-4 md:mx-8 lg:mx-12">

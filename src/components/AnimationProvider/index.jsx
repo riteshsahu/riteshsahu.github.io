@@ -4,8 +4,6 @@ import VenoBox from "venobox";
 
 export default function AnimationProvider({ children }) {
   useEffect(() => {
-    console.log("initialiezed venobox")
-
     new VenoBox({
       selector: ".venobox",
     });
