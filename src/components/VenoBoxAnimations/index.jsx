@@ -2,7 +2,7 @@ import { projects } from "@/config/projects";
 import { useEffect } from "react";
 import VenoBox from "venobox";
 
-export default function AnimationProvider({ children }) {
+export default function VenoBoxAnimations() {
   useEffect(() => {
     new VenoBox({
       selector: ".venobox",
@@ -24,5 +24,5 @@ export default function AnimationProvider({ children }) {
     );
   }, [])
 
-  return children;
+  return null;
 }
