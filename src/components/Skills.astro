@@ -1,0 +1,31 @@
+---
+import { skillsByCategories } from "@/config/skills";
+---
+
+<section class="card mb-8">
+  <h2 class="heading-2">Skills</h2>
+  <div>
+    {
+      skillsByCategories.map((dt) => (
+        <ul class="flex flex-wrap mb-3">
+          <li class="mr-2">
+            <span class="title">{dt.categoryName}:</span>
+          </li>
+          {dt.skills.map((skill) => (
+            <li class="pr-2">
+              <a
+                rel="noreferrer"
+                class="link"
+                target="_blank"
+                href={skill.link}
+                title={skill.title}
+              >
+                {skill.name},
+              </a>
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+  </div>
+</section>

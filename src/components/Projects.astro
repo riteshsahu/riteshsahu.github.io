@@ -1,0 +1,86 @@
+---
+import { projects } from "@/config/projects";
+import { classNames } from "@/utils/helpers";
+import { Image } from "astro:assets";
+---
+
+<section class="card">
+  <h2 class="heading-2">Projects</h2>
+
+  <ul>
+    {
+      projects.map((project) => (
+        <li class="mb-10">
+          <div class="mb-2">
+            <h3 class="heading-3">
+              <a
+                rel="noreferrer"
+                href={project.link}
+                target="_blank"
+                class="link"
+              >
+                {project.name}
+              </a>
+            </h3>
+
+            <p class="pb-1">{project.desc}</p>
+            <p>
+              <span class="text-gray-800">Technology Stack - </span>
+              {project.techStack}
+            </p>
+          </div>
+          <div class="flex align-middle my-1 flex-wrap">
+            {project.images.map((dt) => (
+              <a
+                class={classNames(
+                  "mr-2 border-2 border-gray-500 mb-2",
+                  `js--modal-image-${project.name.toLowerCase()}`
+                )}
+                data-gall={`${project.name?.toLowerCase()}Gallary`}
+                href={dt}
+              >
+                <Image
+                  width={40}
+                  height={24}
+                  src={dt}
+                  alt="Project Screenshot"
+                  class="w-10 h-6"
+                />
+              </a>
+            ))}
+          </div>
+          {project.fullTechStack && (
+            <div class="mb-1">
+              <a
+                class="link-simple flex items-center venobox"
+                data-vbtype="inline"
+                href={`#${project.name?.toLowerCase()}-stack`}
+              >
+                <span class="icon icon-unlink pr-2" />
+                <span class="text-base hover:underline">
+                  View Full Technology Stack
+                </span>
+              </a>
+              <div class="hidden" id={`${project.name?.toLowerCase()}-stack`}>
+                <div class="p-5">
+                  <p>{project.fullTechStack}</p>
+                </div>
+              </div>
+            </div>
+          )}
+          <a
+            rel="noreferrer"
+            href={project.link}
+            class="link-simple flex items-center"
+            target="_blank"
+          >
+            <span class="icon icon-external-link-symbol pr-2" />
+            <span class="text-base hover:underline align-baseline">
+              Find Out More
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
