@@ -99,14 +99,6 @@ h6 {
   max-width: 700px;
 }
 
-.icon {
-  vertical-align: middle;
-
-  & + * {
-    vertical-align: middle;
-  }
-}
-
 .vbox-figlio {
   margin: 0 auto;
   max-width: 80% !important;
