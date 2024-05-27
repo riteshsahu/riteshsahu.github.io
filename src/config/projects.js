@@ -9,7 +9,7 @@ export const projects = [
   {
     name: "Upvote",
     desc: "A platform for people to pogrammers and developers to ask and answer questions related to programming and software developement.",
-    link: "https://git-upvote.herokuapp.com/",
+    link: "https://upvote-f3f780338b93.herokuapp.com/",
     techStack: "PHP, Laravel, Vue, HTML, CSS, JavaScript, Linux.",
     fullTechStack:
       "PHP, Laravel, MySQL, Redis, HTML, CSS, JavaScript, Bootstrap, FontAwesome, WebPack, SASS, Algolia, Vue.",
