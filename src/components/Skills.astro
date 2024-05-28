@@ -7,24 +7,27 @@ import { skillsByCategories } from "@/config/skills";
   <div>
     {
       skillsByCategories.map((dt) => (
-        <ul class="flex flex-wrap mb-3">
-          <li class="mr-2">
+        <div class="md:flex flex-wrap mb-5">
+          <div class="mr-2 flex min-w-[110px]">
             <span class="title">{dt.categoryName}:</span>
-          </li>
-          {dt.skills.map((skill) => (
-            <li class="pr-2">
-              <a
-                rel="noreferrer"
-                class="link"
-                target="_blank"
-                href={skill.link}
-                title={skill.title}
-              >
-                {skill.name},
-              </a>
-            </li>
-          ))}
-        </ul>
+          </div>
+          <ul class="flex-1 flex flex-wrap">
+            {dt.skills.map((skill, idx) => (
+              <li class="pr-2">
+                <a
+                  rel="noreferrer"
+                  class="link"
+                  target="_blank"
+                  href={skill.link}
+                  title={skill.title}
+                >
+                  {skill.name}
+                  {idx !== dt.skills.length - 1 ? "," : "."}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       ))
     }
   </div>

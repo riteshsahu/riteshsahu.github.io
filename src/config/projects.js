@@ -1,51 +1,124 @@
 export const projects = [
   {
-    name: "MasterBrews",
-    desc: "A platform bringing the power of Smart Contracts, NFT and Blockchain technology.",
-    link: "https://masterbrews.cards/",
-    techStack: "Gatsby, React, TailwindCSS, SASS",
-    images: [],
+    name: "CoolPrints",
+    desc: "A print on demand web application where customer can order products with customized designs.",
+    link: "https://coolprints.netlify.app/",
+    techStack: "React, Express.js, Konva.js, Redux, Bootstrap.",
+    images: [
+      {
+        "big": "https://i.imgur.com/nHzizBo.png",
+        "small": "https://i.imgur.com/nHzizBot.png",
+      },
+      {
+        "big": "https://i.imgur.com/3H4mBQU.png",
+        "small": "https://i.imgur.com/3H4mBQUt.png",
+      },
+      {
+        "big": "https://i.imgur.com/jRo1XUp.png",
+        "small": "https://i.imgur.com/jRo1XUpt.png",
+      },
+      {
+        "big": "https://i.imgur.com/YooMba7.png",
+        "small": "https://i.imgur.com/YooMba7t.png",
+      },
+      {
+        "big": "https://i.imgur.com/yJ7IYbu.png",
+        "small": "https://i.imgur.com/yJ7IYbut.png",
+      },
+      {
+        "big": "https://i.imgur.com/xry86x5.png",
+        "small": "https://i.imgur.com/xry86x5t.png",
+      },
+      {
+        "big": "https://i.imgur.com/pj6YLsK.png",
+        "small": "https://i.imgur.com/pj6YLsKt.png",
+      },
+      {
+        "big": "https://i.imgur.com/YlNfkKI.png",
+        "small": "https://i.imgur.com/YlNfkKIt.png",
+      },
+      {
+        "big": "https://i.imgur.com/pdb5U95.png",
+        "small": "https://i.imgur.com/pdb5U95t.png",
+      },
+    ],
   },
   {
     name: "Upvote",
     desc: "A platform for people to pogrammers and developers to ask and answer questions related to programming and software developement.",
     link: "https://upvote-f3f780338b93.herokuapp.com/",
-    techStack: "PHP, Laravel, Vue, HTML, CSS, JavaScript, Linux.",
-    fullTechStack:
-      "PHP, Laravel, MySQL, Redis, HTML, CSS, JavaScript, Bootstrap, FontAwesome, WebPack, SASS, Algolia, Vue.",
+    techStack: "Laravel, Vue, Algolia, Bootstrap, SASS.",
+    logo: "https://i.imgur.com/a3KjiYS.png",
     images: [
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-2.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-3.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-4.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-5.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-6.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-7.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-8.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-9.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-10.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-11.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-12.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555472/upvote/upvote-13.png",
+      {
+        "big": "https://i.imgur.com/eDehDb4.png",
+        "small": "https://i.imgur.com/eDehDb4t.png",
+      },
+      {
+        "big": "https://i.imgur.com/7UCSU8w.png",
+        "small": "https://i.imgur.com/7UCSU8wt.png",
+      },
+      {
+        "big": "https://i.imgur.com/YUTJGj3.png",
+        "small": "https://i.imgur.com/YUTJGj3t.png",
+      },
+      {
+        "big": "https://i.imgur.com/mIxoBkb.png",
+        "small": "https://i.imgur.com/mIxoBkbt.png",
+      },
+
+      {
+        "big": "https://i.imgur.com/3ujvvLH.png",
+        "small": "https://i.imgur.com/3ujvvLHt.png",
+      },
+      {
+        "big": "https://i.imgur.com/3tt6eV2.png",
+        "small": "https://i.imgur.com/3tt6eV2t.png",
+      },
+      {
+        "big": "https://i.imgur.com/GGoAnuW.png",
+        "small": "https://i.imgur.com/GGoAnuWt.png",
+      },
+      {
+        "big": "https://i.imgur.com/9VORdPz.png",
+        "small": "https://i.imgur.com/9VORdPzt.png",
+      },
+      {
+        "big": "https://i.imgur.com/NRqymmr.png",
+        "small": "https://i.imgur.com/NRqymmrt.png",
+      },
+      {
+        "big": "https://i.imgur.com/0PYTkDc.png",
+        "small": "https://i.imgur.com/0PYTkDct.png",
+      },
     ],
   },
   {
     name: "FoodsPoint",
     desc: "Landing page for a food ordering website.",
     link: "https://riteshsahu.github.io/foodspoint/",
-    techStack: "HTML, JavaScript, CSS, SASS, WebPack.",
+    techStack: "HTML, JavaScript, SASS, Webpack.",
     images: [
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-2.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-3.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-4.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-5.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-6.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-7.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-8.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-9.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-10.png",
-      "https://res.cloudinary.com/dxdvk0bcy/image/upload/v1645555730/foodspoint/foodspoint-11.png",
+      {
+        "big": "https://i.imgur.com/qKvQDi4.png",
+        "small": "https://i.imgur.com/qKvQDi4t.png",
+      },
+      {
+        "big": "https://i.imgur.com/VvLFYxC.png",
+        "small": "https://i.imgur.com/VvLFYxCt.png",
+      },
+      {
+        "big": "https://i.imgur.com/jeoe3ST.png",
+        "small": "https://i.imgur.com/jeoe3STt.png",
+      },
+      {
+        "big": "https://i.imgur.com/y5M2bhu.png",
+        "small": "https://i.imgur.com/y5M2bhut.png",
+      },
+      {
+        "big": "https://i.imgur.com/wlJg8c7.png",
+        "small": "https://i.imgur.com/wlJg8c7t.png",
+      }
     ],
-  },
+  }
 ];

@@ -103,12 +103,6 @@ export const skillsByCategories = [
           "Meteor is an open-source platform for web, mobile, and desktop used by over half a million developers around the globe.",
       },
       {
-        name: "React-Query",
-        link: "https://react-query.tanstack.com/",
-        title:
-          "React Query is often described as the missing data-fetching library for React, but in more technical terms, it makes fetching, caching, synchronizing and updating server state in your React applications a breeze.",
-      },
-      {
         name: "Tailwind CSS",
         link: "https://tailwindcss.com/",
         title:
