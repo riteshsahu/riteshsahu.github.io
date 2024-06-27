@@ -1,5 +1,54 @@
 /* purgecss start ignore */
-@import "venobox/dist/venobox.min.css";
+// @import "venobox/dist/venobox.min.css";
 /* purgecss end ignore */
 
-@import "custom";
+@import "fonts";
+
+html {
+  text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  @apply font-primary text-primary;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+// .vbox-content .venoratio {
+//   margin: 0 auto;
+//   height: 85vh;
+//   padding: 0.5rem 0 !important;
+// }
+
+// .vbox-container {
+//   overflow: hidden;
+// }
+
+// .vbox-inline {
+//   height: auto;
+//   width: auto;
+//   max-width: 700px;
+// }
+
+// .vbox-figlio {
+//   margin: 0 auto;
+//   max-width: 80% !important;
+// }
+
+// .bg-gradient {
+//   @apply bg-gradient-to-r from-sky-500 via-purple-500 to-pink-600;
+// }
+// .text-gradient {
+//   @apply bg-clip-text bg-gradient text-transparent;
+// }
+
+.section-heading {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  @apply leading-normal;
+}

@@ -1,0 +1,33 @@
+// TODO: add fallback font
+// @font-face {
+//   font-family: "Wotfard-fallback";
+//   src: local(Verdana);
+//   size-adjust: 90%;
+//   ascent-override: 93%;
+//   descent-override: 18%;
+//   line-gap-override: normal;
+// }
+
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../assets/fonts/sofiapro-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../assets/fonts/sofiapro-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../assets/fonts/sofiapro-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}

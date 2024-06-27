@@ -1,137 +1,92 @@
 ---
 import { projects } from "@/config/projects";
-import { classNames } from "@/utils/helpers";
 import { Image } from "astro:assets";
-const allBigImages = projects.reduce(
-  (pv, cv) => [...pv, ...cv.images.map((img) => img.big)],
-  []
-);
+const { id, class: className } = Astro.props;
 ---
 
-<Fragment slot="head">
-  {
-    allBigImages.map((img) => (
-      <link rel="prefetch" href={img} as="image" crossorigin="anonymous" />
-    ))
-  }
-</Fragment>
-<section class="card">
-  <h2 class="heading-2">Projects</h2>
-
-  <ul>
+<section id={id} class:list={["pt-10 pb-16", className]}>
+  <h1 class="section-heading">My projects</h1>
+  <p
+    class="pt-[15px] pb-[60px] text-[22px] text-[#777777] leading-[1.8] text-center"
+  >
+    A showcase of innovative solutions and successful implementations.
+  </p>
+  <div>
     {
-      projects.map((project) => (
-        <li class="mb-10">
-          <div class="mb-2">
-            <h3 class="heading-3">
-              <a
-                rel="noreferrer"
-                href={project.link}
-                target="_blank"
-                class="link"
-              >
-                {project.name}
-              </a>
-            </h3>
-
-            <p class="pb-1">{project.desc}</p>
-            <div class="flex items-center text-slate-800 text-base mb-3 flex-wrap">
-              <span class="mr-2">Technology Stack: </span>
-              {/* {project.techStack?.split(", ").join(" ● ")} */}
-              <span class="flex items-center flex-wrap">
-                {project.techStack
-                  ?.split(", ")
-                  .reduce(
-                    (pv, cv): any =>
-                      pv === null
-                        ? [cv]
-                        : [
-                            ...pv,
-                            <span class="text-sm mx-1.5">{" ● "}</span>,
-                            cv,
-                          ],
-                    null
-                  )}
-              </span>
-            </div>
-          </div>
-          <div class="flex align-middle my-1 flex-wrap mb-3">
-            {project.images.map((dt) => {
-              const name = project.name?.replace(/\s/g, "").toLowerCase();
-
-              return (
-                <a
-                  class={classNames(
-                    "mr-2 border-2 border-gray-500 mb-2",
-                    `js--modal-image-${name}`
-                  )}
-                  data-gall={`${name}_gallary`}
-                  href={dt.big}
-                >
-                  <Image
-                    width={40}
-                    height={24}
-                    src={dt.small}
-                    alt="Project Screenshot"
-                    class="w-10 h-6"
-                  />
-                </a>
-              );
-            })}
-          </div>
-          {/* {project.fullTechStack && (
-            <div class="mb-1">
-              <a
-                class="link-simple flex items-center venobox"
-                data-vbtype="inline"
-                href={`#${project.name?.toLowerCase()}-stack`}
-              >
-                <span class="w-7">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21"
-                    height="21"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M117.18,188.74a12,12,0,0,1,0,17l-5.12,5.12A58.26,58.26,0,0,1,70.6,228h0A58.62,58.62,0,0,1,29.14,127.92L63.89,93.17a58.64,58.64,0,0,1,98.56,28.11,12,12,0,1,1-23.37,5.44,34.65,34.65,0,0,0-58.22-16.58L46.11,144.89A34.62,34.62,0,0,0,70.57,204h0a34.41,34.41,0,0,0,24.49-10.14l5.11-5.12A12,12,0,0,1,117.18,188.74ZM226.83,45.17a58.65,58.65,0,0,0-82.93,0l-5.11,5.11a12,12,0,0,0,17,17l5.12-5.12a34.63,34.63,0,1,1,49,49L175.1,145.86A34.39,34.39,0,0,1,150.61,156h0a34.63,34.63,0,0,1-33.69-26.72,12,12,0,0,0-23.38,5.44A58.64,58.64,0,0,0,150.56,180h.05a58.28,58.28,0,0,0,41.47-17.17l34.75-34.75a58.62,58.62,0,0,0,0-82.91Z" />
-                  </svg>
+      projects.map(
+        ({
+          title,
+          featureImage,
+          images,
+          desc,
+          techStack,
+          link,
+          githubLink,
+        }) => (
+          <article class="pb-7 last-of-type:mb-0 last-of-type:border-none mb-[50px] border-b border-[#e5e5e5]">
+            <a
+              href={link}
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-[32px] font-semibold align-middle pr-4 inline-block"
+            >
+              {title}
+            </a>
+            <div class="py-2 text-lg">{desc}</div>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {techStack.map((tech) => (
+                <span class="inline-flex px-2 h-6 items-center rounded text-sm bg-gray-200">
+                  {tech}
                 </span>
-                <span class="text-base hover:underline">
-                  View Full Technology Stack
-                </span>
-              </a>
-              <div class="hidden" id={`${project.name?.toLowerCase()}-stack`}>
-                <div class="p-5">
-                  <p>{project.fullTechStack}</p>
-                </div>
-              </div>
+              ))}
             </div>
-          )} */}
-          <a
-            rel="noreferrer"
-            href={project.link}
-            class="link-simple flex items-center"
-            target="_blank"
-          >
-            <span class="w-6">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            <div class="mt-6 mb-[30px]">
+              <Image
+                class="w-full border border-gray-400"
+                src={featureImage}
+                alt="Project Screenshot"
+                loading="lazy"
+              />
+            </div>
+            {/* <div class="flex flex-wrap justify-center gap-2 -mt-4 mb-10">
+              {images.map((img) => (
+                <Image
+                  class="h-6 w-auto border border-black"
+                  src={img}
+                  alt="Screenshot"
                 />
-              </svg>
-            </span>
-            <span class="text-base hover:underline align-baseline">
-              Visit Website
-            </span>
-          </a>
-        </li>
-      ))
+              ))}
+            </div> */}
+            <div class="flex gap-6">
+              <a
+                class={`inline-flex justify-center items-center h-9 rounded whitespace-nowrap 
+                  align-middle transition-all cursor-pointer select-none text-base font-semibold appearance-none px-[18px]
+                  bg-[#ebebeb] hover:bg-[#f5f5f5]
+                  `}
+                href={link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Visit website →
+              </a>
+              {/* <a
+                class={`inline-flex justify-center items-center h-9 rounded whitespace-nowrap 
+                  align-middle transition-all cursor-pointer select-none text-base font-semibold appearance-none px-[18px]
+                  bg-[#ebebeb] hover:bg-[#f5f5f5]
+                  `}
+                href={link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Visit gallary{" "}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                </svg>
+              </a> */}
+            </div>
+          </article>
+        )
+      )
     }
-  </ul>
+  </div>
 </section>

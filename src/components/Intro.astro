@@ -1,0 +1,62 @@
+---
+import { personalDetails } from "@/config/details";
+import { skills } from "@/config/skills";
+import { Image } from "astro:assets";
+import DownloadCVButton from "@/components/DownloadCVButton.astro";
+const { img } = personalDetails;
+const { id, class: className } = Astro.props;
+---
+
+<section id={id} class:list={["py-10 md:py-20", className]}>
+  <div class="flex items-center justify-between">
+    <div class="block max-md:text-center md:flex">
+      <div class="inline-block md:block">
+        <Image
+          class="size-36 md:size-52 max-w-none"
+          src={img}
+          alt="Ritesh Sahu"
+        />
+      </div>
+      <div class="pt-[10px] md:pt-0 md:pl-[30px] lg:pl-[60px]">
+        <h1
+          class="text-[32px] sm:text-[40px] leading-[48px] text-primary font-bold"
+        >
+          I'm a seasoned web development expert with a knack for UX design.
+          <!-- Hi 👋, I'm Ritesh Sahu<br />
+          I build things for the web -->
+        </h1>
+        <div class="text-[22px] md:text-[24px] leading-[1.7] font-normal mt-3">
+          I build pixel-perfect, engaging, and accessible digital experiences.
+          I'm passionate about crafting experiences that are engaging,
+          accessible, and user-centric.
+        </div>
+        <DownloadCVButton class="mt-4" />
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-16 pb-10">
+    {
+      (
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
+          {skills.map((pair) => (
+            <div class="gap-8 flex lg:flex-col">
+              {pair.map((skill) => (
+                <div class="w-full min-w-20 border-gray-200 rounded">
+                  <div class="flex items-center justify-center flex-grow w-full max-w-20 p-2 h-24 mx-auto">
+                    <Image
+                      class="object-contain w-full h-full"
+                      src={skill.img}
+                      alt={`${skill.alt} Logo`}
+                    />
+                  </div>
+                  <div class="text-center">{skill.alt}</div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

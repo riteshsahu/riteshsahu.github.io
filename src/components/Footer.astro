@@ -1,5 +1,11 @@
-<footer class="bg-gray-700">
-  <p class="text-center p-3 text-white">
-    &copy; 2019-present Ritesh Sahu. All Rights Reserved.
-  </p>
+---
+const { class: className } = Astro.props;
+import NavBar from "@/components/NavBar.astro";
+---
+
+<footer class:list={["w-full", className]}>
+  <div class="h-[30px]"></div>
+  <div class="pb-16">
+    <NavBar />
+  </div>
 </footer>
