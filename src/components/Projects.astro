@@ -7,7 +7,7 @@ const { id, class: className } = Astro.props;
 <section id={id} class:list={["pt-10 pb-16", className]}>
   <h1 class="section-heading">My projects</h1>
   <p
-    class="pt-[15px] pb-[60px] text-[22px] text-[#777777] leading-[1.8] text-center"
+    class="pt-[15px] pb-[60px] text-[22px] text-[#777777] dark:text-[#b0aaa6] leading-[1.8] text-center"
   >
     A showcase of innovative solutions and successful implementations.
   </p>
@@ -35,7 +35,7 @@ const { id, class: className } = Astro.props;
             <div class="py-2 text-lg">{desc}</div>
             <div class="flex flex-wrap gap-2 mt-2">
               {techStack.map((tech) => (
-                <span class="inline-flex px-2 h-6 items-center rounded text-sm bg-gray-200">
+                <span class="inline-flex px-2 h-6 text-dark items-center rounded text-sm bg-gray-200">
                   {tech}
                 </span>
               ))}
@@ -60,7 +60,7 @@ const { id, class: className } = Astro.props;
             <div class="flex gap-6">
               <a
                 class={`inline-flex justify-center items-center h-9 rounded whitespace-nowrap 
-                  align-middle transition-all cursor-pointer select-none text-base font-semibold appearance-none px-[18px]
+                  align-middle transition-all cursor-pointer text-dark select-none text-base font-semibold appearance-none px-[18px]
                   bg-[#ebebeb] hover:bg-[#f5f5f5]
                   `}
                 href={link}

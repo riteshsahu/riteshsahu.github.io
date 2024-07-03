@@ -1,6 +1,8 @@
 ---
 import { navLinks } from "@/config";
 import { personalDetails } from "@/config/details";
+import ThemeToggle from "@/components/ThemeToggle.astro";
+const { showThemeToggle = false } = Astro.props;
 ---
 
 <nav class="block max-md:text-center md:flex items-center justify-between">
@@ -81,6 +83,7 @@ import { personalDetails } from "@/config/details";
           </a>
         ))
       }
+      {showThemeToggle && <ThemeToggle />}
     </div>
   </div>
 </nav>

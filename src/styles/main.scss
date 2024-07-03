@@ -9,13 +9,20 @@ html {
   line-height: 1.15;
 }
 
+html.dark {
+  body {
+    @apply text-light;
+  }
+}
+
 body {
-  @apply font-primary text-primary;
+  @apply font-primary text-dark;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.2;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+  transition: color 350ms ease 0s, background 350ms ease 0s;
 }
 
 // .vbox-content .venoratio {

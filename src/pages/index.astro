@@ -46,7 +46,7 @@ const sections = [
     <meta property="og:image:type" content={metaDetails.ogImg.type} />
     <meta property="og:locale" content="en_US" />
     <meta name="description" content={metaDetails.description} />
-    <meta name="keywords" content={metaDetails.keywords} />
+    <meta name="keywords" content={metaDetails.keywords.join(",")} />
 
     <meta itemprop="name" content={metaDetails.title} />
     <meta itemprop="description" content={metaDetails.description} />
@@ -59,7 +59,7 @@ const sections = [
     <meta name="twitter:description" content={metaDetails.description} />
     <meta name="twitter:image:src" content={metaDetails.ogImg.url} />
   </head>
-  <body class="bg-white dark:bg-black">
+  <body class="bg-light dark:bg-dark">
     <Header class="py-5 max-w-[1100px] mx-auto px-2 md:px-12 lg:px-20" />
     <main>
       {
