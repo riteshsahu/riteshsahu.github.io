@@ -1,6 +1,5 @@
 // Profile Image
 import profile from "@/assets/profile.jpg";
-
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Ritesh Sahu",
@@ -21,7 +20,7 @@ export const metaDetails = {
   title: "Ritesh Sahu | Web Developer",
   description:
     "Seasoned web development expert with a passion for creating intuitive and impactful user experiences",
-  url: "https://riteshsahu.github.io/",
+  url: import.meta.env.PUBLIC_HOST,
   twitterId: "@__ritesh",
   keywords: [
     "design",
@@ -83,9 +82,9 @@ export const metaDetails = {
     "tech expertise",
   ],
   ogImg: {
-    url: "https://riteshsahu.github.io/og.png",
-    width: "1280",
-    height: "800",
+    url: `${import.meta.env.PUBLIC_HOST}/og_default.png`,
+    width: "1200",
+    height: "630",
     type: "image/png",
   },
 };
