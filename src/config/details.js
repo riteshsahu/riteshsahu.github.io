@@ -1,5 +1,5 @@
 // Profile Image
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/profile.png";
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Ritesh Sahu",
