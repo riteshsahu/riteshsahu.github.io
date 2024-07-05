@@ -2,7 +2,6 @@ import coolprints from "@/assets/projects/coolprints/coolprints.png";
 import coolprints0 from "@/assets/projects/coolprints/coolprints-0.png";
 import coolprints1 from "@/assets/projects/coolprints/coolprints-1.webp";
 import coolprints2 from "@/assets/projects/coolprints/coolprints-2.png";
-import coolprints3 from "@/assets/projects/coolprints/coolprints-3.png";
 import coolprints4 from "@/assets/projects/coolprints/coolprints-4.png";
 import coolprints5 from "@/assets/projects/coolprints/coolprints-5.png";
 import coolprints6 from "@/assets/projects/coolprints/coolprints-6.png";
@@ -18,7 +17,6 @@ import upvote5 from "@/assets/projects/upvote/upvote-5.png";
 import upvote6 from "@/assets/projects/upvote/upvote-6.png";
 import upvote7 from "@/assets/projects/upvote/upvote-7.png";
 import upvote8 from "@/assets/projects/upvote/upvote-8.png";
-import upvote9 from "@/assets/projects/upvote/upvote-9.png";
 import upvote10 from "@/assets/projects/upvote/upvote-10.png";
 
 import foodspoint1 from "@/assets/projects/foodspoint/foodspoint-1.png";
@@ -39,7 +37,6 @@ export const projects = [
       coolprints0,
       coolprints1,
       coolprints2,
-      coolprints3,
       coolprints4,
       coolprints5,
       coolprints6,
@@ -64,7 +61,6 @@ export const projects = [
       upvote6,
       upvote7,
       upvote8,
-      upvote9,
       upvote10,
     ],
   },

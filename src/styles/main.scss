@@ -1,5 +1,5 @@
 /* purgecss start ignore */
-// @import "venobox/dist/venobox.min.css";
+@import "venobox/dist/venobox.min.css";
 /* purgecss end ignore */
 
 @import "fonts";
@@ -25,26 +25,26 @@ body {
   transition: color 350ms ease 0s, background 350ms ease 0s;
 }
 
-// .vbox-content .venoratio {
-//   margin: 0 auto;
-//   height: 85vh;
-//   padding: 0.5rem 0 !important;
-// }
+.vbox-content .venoratio {
+  margin: 0 auto;
+  height: 85vh;
+  padding: 0.5rem 0 !important;
+}
 
-// .vbox-container {
-//   overflow: hidden;
-// }
+.vbox-container {
+  overflow: hidden;
+}
 
-// .vbox-inline {
-//   height: auto;
-//   width: auto;
-//   max-width: 700px;
-// }
+.vbox-inline {
+  height: auto;
+  width: auto;
+  max-width: 700px;
+}
 
-// .vbox-figlio {
-//   margin: 0 auto;
-//   max-width: 80% !important;
-// }
+.vbox-figlio {
+  margin: 0 auto;
+  max-width: 80% !important;
+}
 
 // .bg-gradient {
 //   @apply bg-gradient-to-r from-sky-500 via-purple-500 to-pink-600;
@@ -54,8 +54,7 @@ body {
 // }
 
 .section-heading {
-  font-size: 40px;
   text-align: center;
   font-weight: bold;
-  @apply leading-normal;
+  @apply leading-normal text-[35px] sm:text-[40px];
 }
