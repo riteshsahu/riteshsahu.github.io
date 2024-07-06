@@ -10,7 +10,7 @@ const { id, class: className } = Astro.props;
 <section id={id} class:list={["py-6 md:py-20", className]}>
   <div class="flex items-center justify-between">
     <div class="block max-md:text-center md:flex">
-      <div class="inline-block md:block">
+      <div class="inline-block md:flex items-center justify-center">
         <Image
           class="size-36 md:size-52 max-w-none"
           src={img}
