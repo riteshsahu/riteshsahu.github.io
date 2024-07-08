@@ -10,6 +10,7 @@ export const personalDetails = {
     title: "Download Ritesh Sahu's CV",
   },
   mail: "riteshsahu314@gmail.com",
+  // Hi 👋, I'm Ritesh Sahu<br /> I build things for the web
   about: `I'm a passionate software engineer based in Indore, India, with over 4 years of experience in the Computer Software industry. My expertise lies in Front-end Development, particularly with React.js, React Native, JavaScript, HTML, and CSS. I take pride in delivering clean, maintainable code and have successfully brought numerous web projects to life from scratch.
   
   Beyond front-end, I have a solid understanding of backend technologies, including Node.js, Nest.js, and MongoDB, along with knowledge of Firebase. I am always eager to learn and explore emerging technologies, striving to create intuitive and impactful user experiences that drive business success.`,
@@ -20,7 +21,7 @@ export const metaDetails = {
   title: "Ritesh Sahu | Web Developer",
   description:
     "Seasoned web development expert with a passion for creating intuitive and impactful user experiences",
-  url: import.meta.env.PUBLIC_HOST,
+  url: "https://riteshsahu.github.io",
   twitterId: "@__ritesh",
   keywords: [
     "design",
@@ -82,7 +83,7 @@ export const metaDetails = {
     "tech expertise",
   ],
   ogImg: {
-    url: `${import.meta.env.PUBLIC_HOST}/og_default.png`,
+    url: `https://riteshsahu.github.io/og_default.png`,
     width: "1200",
     height: "630",
     type: "image/png",
