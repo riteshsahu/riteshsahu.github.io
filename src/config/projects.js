@@ -64,12 +64,12 @@ export const projects = [
       upvote10,
     ],
   },
-  {
-    title: "FoodsPoint",
-    desc: "Landing page for a food ordering website.",
-    link: "https://riteshsahu.github.io/foodspoint/",
-    techStack: ["HTML", "JavaScript", "SASS", "Webpack"],
-    featureImage: foodspoint1,
-    images: [foodspoint1, foodspoint2, foodspoint3, foodspoint4, foodspoint5],
-  },
+  // {
+  //   title: "FoodsPoint",
+  //   desc: "Landing page for a food ordering website.",
+  //   link: "https://riteshsahu.github.io/foodspoint/",
+  //   techStack: ["HTML", "JavaScript", "SASS", "Webpack"],
+  //   featureImage: foodspoint1,
+  //   images: [foodspoint1, foodspoint2, foodspoint3, foodspoint4, foodspoint5],
+  // },
 ];
