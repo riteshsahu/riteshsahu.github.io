@@ -1,8 +1,10 @@
 ---
 const { class: className } = Astro.props;
 import NavBar from "@/components/NavBar.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 ---
 
 <header class:list={["w-full", className]}>
   <NavBar showThemeToggle={true} />
+  <ThemeToggle class="absolute top-0 right-0 mt-1" />
 </header>

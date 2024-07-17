@@ -1,5 +1,9 @@
+---
+const { class: className } = Astro.props;
+---
+
 <button
-  class="theme-toggle theme-toggle--toggled"
+  class:list={["theme-toggle theme-toggle--toggled", className]}
   type="button"
   title="Toggle theme"
   aria-label="Toggle theme"
@@ -8,8 +12,8 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
-    width="21px"
-    height="21px"
+    width="23px"
+    height="23px"
     fill="currentColor"
     class="theme-toggle__expand"
     viewBox="0 0 32 32"
@@ -30,9 +34,6 @@
   #themeToggle {
     border: 0;
     background: none;
-    position: fixed;
-    right: 0;
-    top: 0;
     padding: 20px;
   }
 </style>
