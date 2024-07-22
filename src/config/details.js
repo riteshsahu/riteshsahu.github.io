@@ -5,7 +5,7 @@ export const personalDetails = {
   name: "Ritesh Sahu",
   img: profile,
   resume: {
-    link: "https://drive.google.com/uc?export=download&id=1b0wExD1mK4FF0Jg07MX9uAD2jRagg64e", // one page
+    link: "/Ritesh_Sahu_Resume.pdf", // one page
     // link: "https://drive.google.com/uc?export=download&id=1acBObx7TcsxguW4im8JEiSLcAjY5TKFQ", // two page
     title: "Download Ritesh Sahu's CV",
   },
